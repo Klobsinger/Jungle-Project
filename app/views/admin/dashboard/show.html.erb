@@ -1,2 +1,8 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<div class="card mt-4">
+  <div class="card-header">
+<h2>Dashboard</h2>
+</div>
+<div class="card-body">
+<p> <%= link_to "Number of Products: #{@product_count}", '/admin/products', class: 'text-decoration-none' %></p>
+<p><%= link_to "Number of Categories: #{@category_count}", '/admin/products', class: 'text-decoration-none' %></p>
+</div>
