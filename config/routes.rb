@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-
+  get '/signup' => 'users#new', as: 'new_user'
+  post '/users' => 'users#create', as: 'users'
+  get '/login' => 'sessions#new', as: 'new_session'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy', as: 'logout'
+  
   root to: 'products#index'
 
   resources :products, only: [:index, :show]
